@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Detection Results</title>
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='style.css') }}">
+    <style>
+        body {
+            background-color: #f0f0f0; /* Light gray background color */
+        }
+    </style>
+</head>
+<body>
+    <h1 class="title">Object Detection Results</h1>
+    <div class="image-container">
+        <div class="image-box">
+            <h2 class="image-heading">Input Image</h2>
+            <img src="{{ image_path }}" alt="Uploaded Image" class="result-image">
+        </div>
+        <div class="image-box">
+            <h2 class="image-heading">Detected Image</h2>
+            <img src="{{ detected_image_path }}" alt="Detected Image" class="result-image">
+        </div>
+    </div>
+    <div class="detections">
+        <h2 class="detections-heading">Detection Results</h2>
+        <pre class="detections-content">{{ detections }}</pre>
+    </div>
+
+<!-- Add Circuit Solution -->
+<div class="circuit-solution">
+    <h2 class="circuit-heading">Circuit Solution</h2>
+    <p class="circuit-content">Value of {% if random_choice == 'R' %}R{% elif random_choice == 'V' %}V{% elif random_choice == 'I' %}I{% endif %}: {{ random_value }} {{ unit }}</p>
+</div>
+
+
+</body>
+</html>

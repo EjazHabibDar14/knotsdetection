@@ -1,0 +1,95 @@
+body {
+  text-align: center;
+  font-family: Arial, sans-serif;
+  background-color: #f0f0f0; /* Light gray background color */
+}
+
+.image-container {
+display: flex;
+justify-content: space-between;
+}
+
+.image-container img {
+max-width: 45%; /* Adjust the width of the images as needed */
+}
+
+.title {
+  font-size: 24px;
+  margin: 20px 0;
+}
+
+.upload-form {
+  margin-top: 20px;
+}
+
+.upload-label {
+  font-size: 16px;
+  margin-right: 10px;
+}
+
+.upload-input {
+  font-size: 16px;
+  padding: 10px;
+}
+
+.detect-button {
+  font-size: 16px;
+  padding: 10px 20px;
+  background-color: #007BFF;
+  color: #fff;
+  border: none;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.detect-button:hover {
+  background-color: #0056b3;
+}
+
+.results {
+  margin-top: 20px;
+}
+
+.result-image {
+  max-width: 100%;
+  border: 1px solid #ddd;
+  margin-top: 10px;
+}
+
+.image-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 20px;
+}
+
+.image-box {
+  text-align: center;
+  width: 48%;
+}
+
+.image-heading {
+  font-weight: bold;
+  font-size: 20px;
+  margin-top: 10px;
+}
+
+.detections {
+  margin-top: 20px;
+}
+
+.detections-heading {
+  font-size: 20px;
+  font-weight: bold;
+}
+
+.detections-content {
+  font-size: 16px;
+  white-space: pre-wrap;
+  background-color: #f5f5f5;
+  padding: 10px;
+  border: 1px solid #ddd;
+  text-align: left;
+  max-width: 100%;
+  margin-top: 10px;
+}

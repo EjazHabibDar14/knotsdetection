@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='style.css') }}">
+  <style>
+    body {
+        background-color: #f0f0f0; /* Light gray background color */
+    }
+  </style>
+</head>
+<body>
+  <h1 class="title">Rugs Knots Detection</h1>
+  <form action="/upload" method="post" enctype="multipart/form-data" class="upload-form">
+    <label for="image" class="upload-label">Choose an image for detection:</label>
+    <input type="file" name="image" accept="image/*" class="upload-input" id="image">
+    <button type="submit" class="detect-button">Detect Objects</button>
+  </form>
+  <div class="results" id="results">
+    {% if input_image and detected_image_binary %}
+    <div class="image-container">
+      <div>
+        <h2>Input Image</h2>
+        <img src="{{ input_image }}" class="result-image">
+      </div>
+      <div>
+        <h2>Detected Image</h2>
+        <img src="data:image/jpeg;base64,{{ detected_image_binary }}" alt="Detected Image" class="result-image">
+      </div>
+    </div>
+    {% endif %}
+    {% if knots_detected %}
+    <h2>Detected Knots: {{ knots_detected }}</h2>
+    {% endif %}
+  </div>
+</body>
+</html>
